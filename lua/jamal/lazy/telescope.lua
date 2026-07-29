@@ -14,7 +14,12 @@ return {
                 "node_modules",
                 "dist",
                 "coverage"
-        }}})
+        }},
+        pickers = {
+            find_files = {
+                find_command = { "rg", "--files" },
+            },
+        }})
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
